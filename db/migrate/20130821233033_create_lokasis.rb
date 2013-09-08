@@ -1,7 +1,7 @@
-class CreateLocations < ActiveRecord::Migration
+class CreateLokasis < ActiveRecord::Migration
   def change
-    create_table :locations do |t|
-      t.string :nama_location
+    create_table :lokasis do |t|
+      t.string :nama_lokasi
 
       t.timestamps
     end

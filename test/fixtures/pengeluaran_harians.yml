@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  tanggal: 2013-08-22
+  jumlah: 1
+
+two:
+  tanggal: 2013-08-22
+  jumlah: 1

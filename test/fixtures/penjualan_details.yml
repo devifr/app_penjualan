@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  tanggal: 2013-08-22
+  penjualan_id: 1
+  product_id: 1
+  jumlah_barang: 1
+  jumlah_penjualan: 1
+
+two:
+  tanggal: 2013-08-22
+  penjualan_id: 1
+  product_id: 1
+  jumlah_barang: 1
+  jumlah_penjualan: 1

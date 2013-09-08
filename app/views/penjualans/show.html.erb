@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Tanggal:</b>
+  <%= @penjualan.tanggal %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @penjualan.location_id %>
+</p>
+
+<p>
+  <b>Jumlah penjualan:</b>
+  <%= @penjualan.jumlah_penjualan %>
+</p>
+
+
+<%= link_to 'Edit', edit_penjualan_path(@penjualan) %> |
+<%= link_to 'Back', penjualans_path %>

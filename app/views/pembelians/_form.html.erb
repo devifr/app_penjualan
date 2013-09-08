@@ -1,0 +1,37 @@
+<%= form_for(@pembelian) do |f| %>
+  <% if @pembelian.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pembelian.errors.count, "error") %> prohibited this pembelian from being saved:</h2>
+
+      <ul>
+      <% @pembelian.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :bahan_id %><br />
+    <%= collection_select(:pembelian, :bahan_id, @bahans, :id, :nama) %>
+  </div>
+  <div class="field">
+    <%= f.label :location_id %><br />
+    <%= collection_select(:pembelian, :location_id, @lokasis, :id, :nama_lokasi) %>
+  </div>
+  <div class="field">
+    <%= f.label :harga_beli %><br />
+    <%= f.number_field :harga_beli %>
+  </div>
+  <div class="field">
+    <%= f.label :jumlah %><br />
+    <%= f.number_field :jumlah %>
+  </div>
+  <div class="field">
+    <%= f.label :tanggal %><br />
+    <%= f.date_select :tanggal %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

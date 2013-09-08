@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AppPenjualan</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="container-fluid">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <a class="brand" href="#">APP Teh Poci</a>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span2">
+      <nav>
+        <ul class="nav nav-list">
+          <li class="nav-header">Master</li>
+          <li><%= link_to 'Product', products_path %></li>
+          <li><%= link_to 'Lokasi', lokasis_path %></li>
+          <li><%= link_to 'Bahan', bahans_path %></li>
+          <li><%= link_to 'Karyawan', karyawans_path %></li>
+        </ul>
+        <ul class="nav nav-list">
+          <li class="nav-header">Penjualan</li>
+          <li><%= link_to 'Pembelian', pembelians_path %></li>
+          <li><%= link_to 'Penjualan', penjualans_path %></li>
+          <li><%= link_to 'Pengeluaran Harian', pengeluaran_harians_path %></li>
+          <li><%= link_to 'Pengeluaran Bulanan', pengeluaran_bulanans_path %></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="span10">
+    <%= yield %>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

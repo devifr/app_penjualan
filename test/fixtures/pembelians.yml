@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  bahan_id: 1
+  harga_beli: 1
+  location_id: 1
+  tanggal: 2013-08-22
+
+two:
+  bahan_id: 1
+  harga_beli: 1
+  location_id: 1
+  tanggal: 2013-08-22

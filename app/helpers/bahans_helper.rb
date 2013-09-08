@@ -1,0 +1,2 @@
+module BahansHelper
+end

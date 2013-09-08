@@ -1,0 +1,26 @@
+<h1>Listing bahans</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Nama</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @bahans.each do |bahan| %>
+      <tr>
+        <td><%= bahan.nama %></td>
+        <td>
+          <%= link_to '', bahan,:'class' => "icon-fullscreen" %>
+          <%= link_to '', edit_bahan_path(bahan),:'class' => "icon-edit" %>
+          <%= link_to '', bahan, method: :delete,:'class' => "icon-remove", data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Bahan', new_bahan_path, class: "btn btn-small" %>

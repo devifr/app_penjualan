@@ -1,0 +1,27 @@
+<h1>Listing products</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Nama product</th>
+      <th>Harga</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+<% @products.each do |product| %>
+  <tr>
+    <td><%= product.nama_product %></td>
+    <td><%= product.harga %></td>
+    <td>
+      <%= link_to '', product,:'class' => "icon-fullscreen" %>
+      <%= link_to '', edit_product_path(product),:'class' => "icon-edit" %>
+      <%= link_to '', product, method: :delete,:'class' => "icon-remove", data: { confirm: 'Are you sure?' } %>
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Product', new_product_path, class: "btn btn-small" %>

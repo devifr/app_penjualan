@@ -1,0 +1,21 @@
+<%= form_for(@lokasi) do |f| %>
+  <% if @lokasi.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lokasi.errors.count, "error") %> prohibited this lokasi from being saved:</h2>
+
+      <ul>
+      <% @lokasi.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nama_lokasi %><br />
+    <%= f.text_field :nama_lokasi %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

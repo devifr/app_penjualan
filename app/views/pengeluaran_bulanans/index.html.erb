@@ -1,0 +1,28 @@
+<h1>Listing pengeluaran_bulanans</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Bulan</th>
+      <th>Jumlah</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @pengeluaran_bulanans.each do |pengeluaran_bulanan| %>
+      <tr>
+        <td><%= pengeluaran_bulanan.bulan %></td>
+        <td><%= pengeluaran_bulanan.jumlah %></td>
+        <td>
+          <%= link_to '', pengeluaran_bulanan,:'class' => "icon-fullscreen" %>
+          <%= link_to '', edit_pengeluaran_bulanan_path(pengeluaran_bulanan),:'class' => "icon-edit" %>
+          <%= link_to '', pengeluaran_bulanan, method: :delete,:'class' => "icon-fullscreen", data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Pengeluaran bulanan', new_pengeluaran_bulanan_path, class: "btn btn-small" %>

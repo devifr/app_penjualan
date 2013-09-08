@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nama_karyawan: MyString
+  gaji: 1
+  location_id: 1
+
+two:
+  nama_karyawan: MyString
+  gaji: 1
+  location_id: 1

@@ -1,0 +1,30 @@
+<h1>Listing karyawans</h1>
+
+<table class="table table-striped"><thead>
+  <thead>
+    <tr>
+      <th>Nama karyawan</th>
+      <th>Gaji</th>
+      <th>Location</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @karyawans.each do |karyawan| %>
+      <tr>
+        <td><%= karyawan.nama_karyawan %></td>
+        <td><%= karyawan.gaji %></td>
+        <td><%= karyawan.location_id %></td>
+        <td>
+          <%= link_to '', karyawan,:'class' => "icon-fullscreen" %>
+          <%= link_to '', edit_karyawan_path(karyawan),:'class' => "icon-edit" %>
+          <%= link_to '', karyawan, method: :delete,:'class' => "icon-remove", data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Karyawan', new_karyawan_path, class: "btn btn-small" %>

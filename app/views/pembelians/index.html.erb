@@ -1,0 +1,32 @@
+<h1>Listing pembelians</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Bahan</th>
+      <th>Harga beli</th>
+      <th>Location</th>
+      <th>Tanggal</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @pembelians.each do |pembelian| %>
+      <tr>
+        <td><%= pembelian.bahan_id %></td>
+        <td><%= pembelian.harga_beli %></td>
+        <td><%= pembelian.location_id %></td>
+        <td><%= pembelian.tanggal %></td>
+        <td>
+          <%= link_to '', pembelian,:'class' => "icon-fullscreen" %>
+          <%= link_to '', edit_pembelian_path(pembelian),:'class' => "icon-edit" %>
+          <%= link_to '', pembelian, method: :delete,:'class' => "icon-remove", data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Pembelian', new_pembelian_path, class: "btn btn-small" %>

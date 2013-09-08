@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nama_product: 
+  harga: 1.5
+
+two:
+  nama_product: 
+  harga: 1.5

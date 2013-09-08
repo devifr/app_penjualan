@@ -1,0 +1,25 @@
+<%= form_for(@pengeluaran_bulanan) do |f| %>
+  <% if @pengeluaran_bulanan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pengeluaran_bulanan.errors.count, "error") %> prohibited this pengeluaran_bulanan from being saved:</h2>
+
+      <ul>
+      <% @pengeluaran_bulanan.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :bulan %><br />
+    <%= f.date_select :bulan %>
+  </div>
+  <div class="field">
+    <%= f.label :jumlah %><br />
+    <%= f.number_field :jumlah %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

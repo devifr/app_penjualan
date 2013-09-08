@@ -1,0 +1,28 @@
+<h1>Listing pengeluaran_harians</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Tanggal</th>
+      <th>Jumlah</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @pengeluaran_harians.each do |pengeluaran_harian| %>
+      <tr>
+        <td><%= pengeluaran_harian.tanggal %></td>
+        <td><%= pengeluaran_harian.jumlah %></td>
+        <td>
+          <%= link_to '', pengeluaran_harian,:'class' => "icon-fullscreen" %>
+          <%= link_to '', edit_pengeluaran_harian_path(pengeluaran_harian),:'class' => "icon-edit" %>
+          <%= link_to '', pengeluaran_harian, method: :delete,:'class' => "icon-remove", data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Pengeluaran harian', new_pengeluaran_harian_path, class: "btn btn-small" %>

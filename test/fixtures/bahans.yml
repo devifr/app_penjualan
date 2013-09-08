@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nama: MyString
+  stock: 1
+
+two:
+  nama: MyString
+  stock: 1

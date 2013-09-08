@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Tanggal:</b>
+  <%= @pengeluaran_harian.tanggal %>
+</p>
+
+<p>
+  <b>Jumlah:</b>
+  <%= @pengeluaran_harian.jumlah %>
+</p>
+
+
+<%= link_to 'Edit', edit_pengeluaran_harian_path(@pengeluaran_harian) %> |
+<%= link_to 'Back', pengeluaran_harians_path %>

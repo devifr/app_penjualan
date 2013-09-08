@@ -1,0 +1,30 @@
+<h1>Listing penjualans</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Tanggal</th>
+      <th>Location</th>
+      <th>Jumlah penjualan</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @penjualans.each do |penjualan| %>
+    <tr>
+      <td><%= penjualan.tanggal %></td>
+      <td><%= penjualan.location_id %></td>
+      <td><%= penjualan.jumlah_penjualan %></td>
+      <td>
+        <%= link_to '', penjualan,:'class' => "icon-fullscreen" %>
+        <%= link_to '', edit_penjualan_path(penjualan),:'class' => "icon-edit" %>
+        <%= link_to '', penjualan, method: :delete,:'class' => "icon-fullscreen", data: { confirm: 'Are you sure?' } %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Penjualan', new_penjualan_path, class: "btn btn-small" %>

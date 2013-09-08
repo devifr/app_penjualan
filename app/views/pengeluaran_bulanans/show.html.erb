@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Bulan:</b>
+  <%= @pengeluaran_bulanan.bulan %>
+</p>
+
+<p>
+  <b>Jumlah:</b>
+  <%= @pengeluaran_bulanan.jumlah %>
+</p>
+
+
+<%= link_to 'Edit', edit_pengeluaran_bulanan_path(@pengeluaran_bulanan) %> |
+<%= link_to 'Back', pengeluaran_bulanans_path %>

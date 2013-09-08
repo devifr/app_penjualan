@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Bahan:</b>
+  <%= @pembelian.bahan_id %>
+</p>
+
+<p>
+  <b>Harga beli:</b>
+  <%= @pembelian.harga_beli %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @pembelian.location_id %>
+</p>
+
+<p>
+  <b>Tanggal:</b>
+  <%= @pembelian.tanggal %>
+</p>
+
+
+<%= link_to 'Edit', edit_pembelian_path(@pembelian) %> |
+<%= link_to 'Back', pembelians_path %>

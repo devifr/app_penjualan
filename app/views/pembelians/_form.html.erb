@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :location_id %><br />
-    <%= collection_select(:pembelian, :location_id, @lokasis, :id, :nama_lokasi) %>
+    <%= collection_select(:pembelian, :location_id, @locations, :id, :name_location) %>
   </div>
   <div class="field">
     <%= f.label :harga_beli %><br />

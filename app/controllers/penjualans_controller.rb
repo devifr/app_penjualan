@@ -25,7 +25,8 @@ class PenjualansController < ApplicationController
   # GET /penjualans/new.json
   def new
     @penjualan = Penjualan.new
-
+    @products = Product.all
+    @locations = Location.all
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @penjualan }

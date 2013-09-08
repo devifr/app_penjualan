@@ -13,7 +13,7 @@
   <% @penjualans.each do |penjualan| %>
     <tr>
       <td><%= penjualan.tanggal %></td>
-      <td><%= penjualan.location_id %></td>
+      <td><%= penjualan.location.name_location %></td>
       <td><%= penjualan.jumlah_penjualan %></td>
       <td>
         <%= link_to '', penjualan,:'class' => "icon-fullscreen" %>

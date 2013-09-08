@@ -20,7 +20,7 @@ AppPenjualan::Application.routes.draw do
   resources :bahans
 
 
-  resources :lokasis
+  resources :locations
 
 
   resources :products

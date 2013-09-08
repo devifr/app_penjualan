@@ -1,4 +1,4 @@
 require 'test_helper'
 
-class LokasisHelperTest < ActionView::TestCase
+class LocationsHelperTest < ActionView::TestCase
 end

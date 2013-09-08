@@ -1,0 +1,26 @@
+<h1>Listing locations</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Nama location</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @locations.each do |location| %>
+      <tr>
+        <td><%= location.name_location %></td>
+        <td>
+          <%= link_to '', location,:'class' => "icon-fullscreen" %>
+          <%= link_to '', edit_location_path(location),:'class' => "icon-edit" %>
+          <%= link_to '', location, method: :delete,:'class' => "icon-fullscreen", data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Location', new_location_path, class: "btn btn-small" %>

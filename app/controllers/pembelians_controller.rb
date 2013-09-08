@@ -26,7 +26,7 @@ class PembeliansController < ApplicationController
   def new
     @pembelian = Pembelian.new
     @bahans = Bahan.all
-    @lokasis = Lokasi.all
+    @locations = Location.all
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @pembelian }
@@ -36,7 +36,7 @@ class PembeliansController < ApplicationController
   # GET /pembelians/1/edit
   def edit
     @bahans = Bahan.all
-    @lokasis = Lokasi.all
+    @locations = Location.all
     @pembelian = Pembelian.find(params[:id])
   end
 

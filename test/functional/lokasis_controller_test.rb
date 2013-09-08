@@ -1,14 +1,14 @@
 require 'test_helper'
 
-class LokasisControllerTest < ActionController::TestCase
+class LocationsControllerTest < ActionController::TestCase
   setup do
-    @lokasi = lokasis(:one)
+    @location = locations(:one)
   end
 
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:lokasis)
+    assert_not_nil assigns(:locations)
   end
 
   test "should get new" do
@@ -16,34 +16,34 @@ class LokasisControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create lokasi" do
-    assert_difference('Lokasi.count') do
-      post :create, lokasi: { nama_lokasi: @lokasi.nama_lokasi }
+  test "should create location" do
+    assert_difference('Location.count') do
+      post :create, location: { name_location: @location.name_location }
     end
 
-    assert_redirected_to lokasi_path(assigns(:lokasi))
+    assert_redirected_to location_path(assigns(:location))
   end
 
-  test "should show lokasi" do
-    get :show, id: @lokasi
+  test "should show location" do
+    get :show, id: @location
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @lokasi
+    get :edit, id: @location
     assert_response :success
   end
 
-  test "should update lokasi" do
-    put :update, id: @lokasi, lokasi: { nama_lokasi: @lokasi.nama_lokasi }
-    assert_redirected_to lokasi_path(assigns(:lokasi))
+  test "should update location" do
+    put :update, id: @location, location: { name_location: @location.name_location }
+    assert_redirected_to location_path(assigns(:location))
   end
 
-  test "should destroy lokasi" do
-    assert_difference('Lokasi.count', -1) do
-      delete :destroy, id: @lokasi
+  test "should destroy location" do
+    assert_difference('Location.count', -1) do
+      delete :destroy, id: @location
     end
 
-    assert_redirected_to lokasis_path
+    assert_redirected_to locations_path
   end
 end

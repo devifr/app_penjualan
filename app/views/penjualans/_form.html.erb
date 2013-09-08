@@ -17,12 +17,19 @@
   </div>
   <div class="field">
     <%= f.label :location_id %><br />
-    <%= f.number_field :location_id %>
+    <%= collection_select(:penjualan, :location_id, @locations, :id, :name_location) %>
   </div>
-  <div class="field">
-    <%= f.label :jumlah_penjualan %><br />
-    <%= f.number_field :jumlah_penjualan %>
+  <div class='nested_attributes'>
+    <%= f.fields_for (:penjualan_details) do |f_details| %>
+      <%= render "penjualan_detail_fields", f: f_details %>
+    <% end %>
+      <div class="buttons pull-left">
+      <%= link_to_add_association '<i></i>Add Penjualan'.html_safe, f, :penjualan_details,:class => "btn btn-icon btn-primary glyphicons circle_plus" %>
+    </div>
   </div>
+  <br/>
+  <br/>
+  <br/>
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -13,9 +13,9 @@
   <tbody>
     <% @pembelians.each do |pembelian| %>
       <tr>
-        <td><%= pembelian.bahan_id %></td>
+        <td><%= pembelian.bahan.nama %></td>
         <td><%= pembelian.harga_beli %></td>
-        <td><%= pembelian.location.name_location %></td>
+        <td><%= pembelian.bahan.location.name_location if pembelian.bahan %></td>
         <td><%= pembelian.tanggal %></td>
         <td>
           <%= link_to '', pembelian,:'class' => "icon-fullscreen" %>

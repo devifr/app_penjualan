@@ -2,9 +2,9 @@ class PenjualanDetail < ActiveRecord::Base
   attr_accessible :jumlah_barang, :jumlah_penjualan, :penjualan_id, :product_id, :tanggal
 
   belongs_to :product
-  belongs_to :penjualan_id
+  belongs_to :penjualan
 
-  before_save :set_jumlah_penjualan
+  after_validation :set_jumlah_penjualan
 
   def set_jumlah_penjualan
     jumlah_barang = self.jumlah_barang

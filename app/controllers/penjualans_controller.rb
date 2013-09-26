@@ -1,6 +1,7 @@
 class PenjualansController < ApplicationController
   # GET /penjualans
   # GET /penjualans.json
+
   def index
     @penjualans = Penjualan.all
 
@@ -14,6 +15,8 @@ class PenjualansController < ApplicationController
   # GET /penjualans/1.json
   def show
     @penjualan = Penjualan.find(params[:id])
+    @penjualan_details = @penjualan.penjualan_details
+    @penjualan_bahans = @penjualan.penjualan_bahans
 
     respond_to do |format|
       format.html # show.html.erb
@@ -21,12 +24,16 @@ class PenjualansController < ApplicationController
     end
   end
 
+  def select_location
+    @locations = Location.all
+  end
+
   # GET /penjualans/new
   # GET /penjualans/new.json
   def new
     @penjualan = Penjualan.new
     @products = Product.all
-    @locations = Location.all
+    @bahans = Bahan.where('location_id = ?',params[:location_id])
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @penjualan }
@@ -36,6 +43,9 @@ class PenjualansController < ApplicationController
   # GET /penjualans/1/edit
   def edit
     @penjualan = Penjualan.find(params[:id])
+    @products = Product.all
+    @bahans = Bahan.all
+    @locations = Location.all
   end
 
   # POST /penjualans

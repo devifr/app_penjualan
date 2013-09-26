@@ -1,4 +1,7 @@
 AppPenjualan::Application.routes.draw do
+  resources :penjualan_bahans
+
+
   resources :pengeluaran_bulanans
 
 
@@ -14,19 +17,22 @@ AppPenjualan::Application.routes.draw do
   resources :penjualan_details
 
 
-  resources :penjualans
+  resources :penjualans, except: [:new]
 
 
   resources :bahans
 
 
-  resources :locations
+  resources :locations do
+    get 'penjualan/new', to: 'penjualans#new', as: 'new_penjualan'
+  end
 
 
   resources :products
 
 
   get "home/index"
+  get "penjualan/select_location", to: 'penjualans#select_location', as: 'select_location'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -5,6 +5,8 @@ gem 'execjs'
 gem 'therubyracer', :platforms => :ruby
 gem 'newrelic_rpm'
 gem 'devise'
+gem 'wkhtmltopdf-binary'
+gem 'wicked_pdf'
 
 # Bundle edge Rails instead
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -17,6 +19,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'shoulda'
   gem 'guard-rspec', '0.5.5'
+  gem 'debugger'
 end
 
 

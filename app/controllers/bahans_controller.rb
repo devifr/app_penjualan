@@ -25,7 +25,7 @@ class BahansController < ApplicationController
   # GET /bahans/new.json
   def new
     @bahan = Bahan.new
-
+    @locations = Location.all
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @bahan }
@@ -34,6 +34,7 @@ class BahansController < ApplicationController
 
   # GET /bahans/1/edit
   def edit
+    @locations = Location.all
     @bahan = Bahan.find(params[:id])
   end
 

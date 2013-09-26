@@ -13,11 +13,7 @@
 
   <div class="field">
     <%= f.label :bahan_id %><br />
-    <%= collection_select(:pembelian, :bahan_id, @bahans, :id, :nama) %>
-  </div>
-  <div class="field">
-    <%= f.label :location_id %><br />
-    <%= collection_select(:pembelian, :location_id, @locations, :id, :name_location) %>
+    <%= collection_select(:pembelian, :bahan_id, @bahans, :id, :bahan_location) %>
   </div>
   <div class="field">
     <%= f.label :harga_beli %><br />

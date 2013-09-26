@@ -18,7 +18,7 @@
       <td>
         <%= link_to '', penjualan,:'class' => "icon-fullscreen" %>
         <%= link_to '', edit_penjualan_path(penjualan),:'class' => "icon-edit" %>
-        <%= link_to '', penjualan, method: :delete,:'class' => "icon-fullscreen", data: { confirm: 'Are you sure?' } %>
+        <%= link_to '', penjualan, method: :delete,:'class' => "icon-remove", data: { confirm: 'Are you sure?' } %>
       </td>
     </tr>
   <% end %>
@@ -27,4 +27,4 @@
 
 <br />
 
-<%= link_to 'New Penjualan', new_penjualan_path, class: "btn btn-small" %>
+<%= link_to 'New Penjualan', select_location_path, class: "btn btn-small" %>

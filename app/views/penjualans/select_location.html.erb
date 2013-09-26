@@ -1,0 +1,9 @@
+<h1>Select Location</h1>
+
+<ul>
+  <% @locations.each do |loc| %>
+  <li><%= link_to loc.name_location, location_new_penjualan_path(loc.id) %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Back', penjualans_path %>

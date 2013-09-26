@@ -1,0 +1,146 @@
+Script started on Wed 25 Sep 2013 03:37:59 PM WIT
+]0;dfedogawa@edogawa: ~/project/app_penjualandfedogawa@edogawa:~/project/app_penjualan$ git pushcommit -m 'add link breadcumb'add .[Kcommit -m 'add even window ready' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd vendor/assets/javascripts/multti/canvas_application.js[A]0;dfedogawa@edogawa: ~/project/app_penjualandfedogawa@edogawa:~/project/app_penjualan$ [C[C[C[C[3Pcommit -m 'add postcode field'
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd app/views/shares/_form_addresss.html.erb[A]0;dfedogawa@edogawa: ~/project/app_penjualandfedogawa@edogawa:~/project/app_penjualan$ [C[C[C[Cstatus[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Ppushcommit -m 'add field in export'[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K^C
+]0;dfedogawa@edogawa: ~/project/app_penjualandfedogawa@edogawa:~/project/app_penjualan$ ^C
+]0;dfedogawa@edogawa: ~/project/app_penjualandfedogawa@edogawa:~/project/app_penjualan$ script install git://github.com/diwad m/ChainSelects.git[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cuinstall git://github.com/diwadm/ChainSelects.git[A]0;dfedogawa@edogawa: ~/project/app_penjualandfedogawa@edogawa:~/project/app_penjualan$ [C[C[C[C[C[C[C[Cninstall git://github.com/diwadm/ChainSelects.git[A]0;dfedogawa@edogawa: ~/project/app_penjualandfedogawa@edogawa:~/project/app_penjualan$ [C[C[C[C[C[C[C[C[C
+
+Script started, file is uninstall
+]0;dfedogawa@edogawa: ~/project/app_penjualandfedogawa@edogawa:~/project/app_penjualan$ rake routes
+        penjualan_bahans GET    /penjualan_bahans(.:format)                     penjualan_bahans#index
+                         POST   /penjualan_bahans(.:format)                     penjualan_bahans#create
+     new_penjualan_bahan GET    /penjualan_bahans/new(.:format)                 penjualan_bahans#new
+    edit_penjualan_bahan GET    /penjualan_bahans/:id/edit(.:format)            penjualan_bahans#edit
+         penjualan_bahan GET    /penjualan_bahans/:id(.:format)                 penjualan_bahans#show
+                         PUT    /penjualan_bahans/:id(.:format)                 penjualan_bahans#update
+                         DELETE /penjualan_bahans/:id(.:format)                 penjualan_bahans#destroy
+    pengeluaran_bulanans GET    /pengeluaran_bulanans(.:format)                 pengeluaran_bulanans#index
+                         POST   /pengeluaran_bulanans(.:format)                 pengeluaran_bulanans#create
+ new_pengeluaran_bulanan GET    /pengeluaran_bulanans/new(.:format)             pengeluaran_bulanans#new
+edit_pengeluaran_bulanan GET    /pengeluaran_bulanans/:id/edit(.:format)        pengeluaran_bulanans#edit
+     pengeluaran_bulanan GET    /pengeluaran_bulanans/:id(.:format)             pengeluaran_bulanans#show
+                         PUT    /pengeluaran_bulanans/:id(.:format)             pengeluaran_bulanans#update
+                         DELETE /pengeluaran_bulanans/:id(.:format)             pengeluaran_bulanans#destroy
+     pengeluaran_harians GET    /pengeluaran_harians(.:format)                  pengeluaran_harians#index
+                         POST   /pengeluaran_harians(.:format)                  pengeluaran_harians#create
+  new_pengeluaran_harian GET    /pengeluaran_harians/new(.:format)              pengeluaran_harians#new
+ edit_pengeluaran_harian GET    /pengeluaran_harians/:id/edit(.:format)         pengeluaran_harians#edit
+      pengeluaran_harian GET    /pengeluaran_harians/:id(.:format)              pengeluaran_harians#show
+                         PUT    /pengeluaran_harians/:id(.:format)              pengeluaran_harians#update
+                         DELETE /pengeluaran_harians/:id(.:format)              pengeluaran_harians#destroy
+               karyawans GET    /karyawans(.:format)                            karyawans#index
+                         POST   /karyawans(.:format)                            karyawans#create
+            new_karyawan GET    /karyawans/new(.:format)                        karyawans#new
+           edit_karyawan GET    /karyawans/:id/edit(.:format)                   karyawans#edit
+                karyawan GET    /karyawans/:id(.:format)                        karyawans#show
+                         PUT    /karyawans/:id(.:format)                        karyawans#update
+                         DELETE /karyawans/:id(.:format)                        karyawans#destroy
+              pembelians GET    /pembelians(.:format)                           pembelians#index
+                         POST   /pembelians(.:format)                           pembelians#create
+           new_pembelian GET    /pembelians/new(.:format)                       pembelians#new
+          edit_pembelian GET    /pembelians/:id/edit(.:format)                  pembelians#edit
+               pembelian GET    /pembelians/:id(.:format)                       pembelians#show
+                         PUT    /pembelians/:id(.:format)                       pembelians#update
+                         DELETE /pembelians/:id(.:format)                       pembelians#destroy
+       penjualan_details GET    /penjualan_details(.:format)                    penjualan_details#index
+                         POST   /penjualan_details(.:format)                    penjualan_details#create
+    new_penjualan_detail GET    /penjualan_details/new(.:format)                penjualan_details#new
+   edit_penjualan_detail GET    /penjualan_details/:id/edit(.:format)           penjualan_details#edit
+        penjualan_detail GET    /penjualan_details/:id(.:format)                penjualan_details#show
+                         PUT    /penjualan_details/:id(.:format)                penjualan_details#update
+                         DELETE /penjualan_details/:id(.:format)                penjualan_details#destroy
+              penjualans GET    /penjualans(.:format)                           penjualans#index
+                         POST   /penjualans(.:format)                           penjualans#create
+          edit_penjualan GET    /penjualans/:id/edit(.:format)                  penjualans#edit
+               penjualan GET    /penjualans/:id(.:format)                       penjualans#show
+                         PUT    /penjualans/:id(.:format)                       penjualans#update
+                         DELETE /penjualans/:id(.:format)                       penjualans#destroy
+                  bahans GET    /bahans(.:format)                               bahans#index
+                         POST   /bahans(.:format)                               bahans#create
+               new_bahan GET    /bahans/new(.:format)                           bahans#new
+              edit_bahan GET    /bahans/:id/edit(.:format)                      bahans#edit
+                   bahan GET    /bahans/:id(.:format)                           bahans#show
+                         PUT    /bahans/:id(.:format)                           bahans#update
+                         DELETE /bahans/:id(.:format)                           bahans#destroy
+  location_new_penjualan GET    /locations/:location_id/penjualan/new(.:format) penjualans#new
+               locations GET    /locations(.:format)                            locations#index
+                         POST   /locations(.:format)                            locations#create
+            new_location GET    /locations/new(.:format)                        locations#new
+           edit_location GET    /locations/:id/edit(.:format)                   locations#edit
+                location GET    /locations/:id(.:format)                        locations#show
+                         PUT    /locations/:id(.:format)                        locations#update
+                         DELETE /locations/:id(.:format)                        locations#destroy
+                products GET    /products(.:format)                             products#index
+                         POST   /products(.:format)                             products#create
+             new_product GET    /products/new(.:format)                         products#new
+            edit_product GET    /products/:id/edit(.:format)                    products#edit
+                 product GET    /products/:id(.:format)                         products#show
+                         PUT    /products/:id(.:format)                         products#update
+                         DELETE /products/:id(.:format)                         products#destroy
+              home_index GET    /home/index(.:format)                           home#index
+                    root        /                                               home#index
+]0;dfedogawa@edogawa: ~/project/app_penjualandfedogawa@edogawa:~/project/app_penjualan$ ^C
+]0;dfedogawa@edogawa: ~/project/app_penjualandfedogawa@edogawa:~/project/app_penjualan$ rake routes[3Pgit pushcommit -m 'add link breadcumb'[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Krake routes
+        penjualan_bahans GET    /penjualan_bahans(.:format)                     penjualan_bahans#index
+                         POST   /penjualan_bahans(.:format)                     penjualan_bahans#create
+     new_penjualan_bahan GET    /penjualan_bahans/new(.:format)                 penjualan_bahans#new
+    edit_penjualan_bahan GET    /penjualan_bahans/:id/edit(.:format)            penjualan_bahans#edit
+         penjualan_bahan GET    /penjualan_bahans/:id(.:format)                 penjualan_bahans#show
+                         PUT    /penjualan_bahans/:id(.:format)                 penjualan_bahans#update
+                         DELETE /penjualan_bahans/:id(.:format)                 penjualan_bahans#destroy
+    pengeluaran_bulanans GET    /pengeluaran_bulanans(.:format)                 pengeluaran_bulanans#index
+                         POST   /pengeluaran_bulanans(.:format)                 pengeluaran_bulanans#create
+ new_pengeluaran_bulanan GET    /pengeluaran_bulanans/new(.:format)             pengeluaran_bulanans#new
+edit_pengeluaran_bulanan GET    /pengeluaran_bulanans/:id/edit(.:format)        pengeluaran_bulanans#edit
+     pengeluaran_bulanan GET    /pengeluaran_bulanans/:id(.:format)             pengeluaran_bulanans#show
+                         PUT    /pengeluaran_bulanans/:id(.:format)             pengeluaran_bulanans#update
+                         DELETE /pengeluaran_bulanans/:id(.:format)             pengeluaran_bulanans#destroy
+     pengeluaran_harians GET    /pengeluaran_harians(.:format)                  pengeluaran_harians#index
+                         POST   /pengeluaran_harians(.:format)                  pengeluaran_harians#create
+  new_pengeluaran_harian GET    /pengeluaran_harians/new(.:format)              pengeluaran_harians#new
+ edit_pengeluaran_harian GET    /pengeluaran_harians/:id/edit(.:format)         pengeluaran_harians#edit
+      pengeluaran_harian GET    /pengeluaran_harians/:id(.:format)              pengeluaran_harians#show
+                         PUT    /pengeluaran_harians/:id(.:format)              pengeluaran_harians#update
+                         DELETE /pengeluaran_harians/:id(.:format)              pengeluaran_harians#destroy
+               karyawans GET    /karyawans(.:format)                            karyawans#index
+                         POST   /karyawans(.:format)                            karyawans#create
+            new_karyawan GET    /karyawans/new(.:format)                        karyawans#new
+           edit_karyawan GET    /karyawans/:id/edit(.:format)                   karyawans#edit
+                karyawan GET    /karyawans/:id(.:format)                        karyawans#show
+                         PUT    /karyawans/:id(.:format)                        karyawans#update
+                         DELETE /karyawans/:id(.:format)                        karyawans#destroy
+              pembelians GET    /pembelians(.:format)                           pembelians#index
+                         POST   /pembelians(.:format)                           pembelians#create
+           new_pembelian GET    /pembelians/new(.:format)                       pembelians#new
+          edit_pembelian GET    /pembelians/:id/edit(.:format)                  pembelians#edit
+               pembelian GET    /pembelians/:id(.:format)                       pembelians#show
+                         PUT    /pembelians/:id(.:format)                       pembelians#update
+                         DELETE /pembelians/:id(.:format)                       pembelians#destroy
+       penjualan_details GET    /penjualan_details(.:format)                    penjualan_details#index
+                         POST   /penjualan_details(.:format)                    penjualan_details#create
+    new_penjualan_detail GET    /penjualan_details/new(.:format)                penjualan_details#new
+   edit_penjualan_detail GET    /penjualan_details/:id/edit(.:format)           penjualan_details#edit
+        penjualan_detail GET    /penjualan_details/:id(.:format)                penjualan_details#show
+                         PUT    /penjualan_details/:id(.:format)                penjualan_details#update
+                         DELETE /penjualan_details/:id(.:format)                penjualan_details#destroy
+              penjualans GET    /penjualans(.:format)                           penjualans#index
+                         POST   /penjualans(.:format)                           penjualans#create
+          edit_penjualan GET    /penjualans/:id/edit(.:format)                  penjualans#edit
+               penjualan GET    /penjualans/:id(.:format)                       penjualans#show
+                         PUT    /penjualans/:id(.:format)                       penjualans#update
+                         DELETE /penjualans/:id(.:format)                       penjualans#destroy
+                  bahans GET    /bahans(.:format)                               bahans#index
+                         POST   /bahans(.:format)                               bahans#create
+               new_bahan GET    /bahans/new(.:format)                           bahans#new
+              edit_bahan GET    /bahans/:id/edit(.:format)                      bahans#edit
+                   bahan GET    /bahans/:id(.:format)                           bahans#show
+                         PUT    /bahans/:id(.:format)                           bahans#update
+                         DELETE /bahans/:id(.:format)                           bahans#destroy
+  location_new_penjualan GET    /locations/:location_id/penjualan/new(.:format) penjualans#new
+               locations GET    /locations(.:format)                            locations#index
+                         POST   /locations(.:format)                            locations#create
+            new_location GET    /locations/new(.:format)                        locations#new
+           edit_location GET    /locations/:id/edit(.:format)                   locations#edit
+                location GET    /locations/:id(.:format)                        locations#show
+                         PUT    /locations/:id(.:format)                        locations#update
+                         DELETE /locations/:id(.:format)                        locations#

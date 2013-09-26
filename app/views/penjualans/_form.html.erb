@@ -2,7 +2,6 @@
   <% if @penjualan.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@penjualan.errors.count, "error") %> prohibited this penjualan from being saved:</h2>
-
       <ul>
       <% @penjualan.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -15,21 +14,31 @@
     <%= f.label :tanggal %><br />
     <%= f.date_select :tanggal %>
   </div>
-  <div class="field">
-    <%= f.label :location_id %><br />
-    <%= collection_select(:penjualan, :location_id, @locations, :id, :name_location) %>
-  </div>
+<!--   <div class="field">
+    <%#= f.label :location_id %><br />
+    <%#= collection_select(:penjualan, :location_id, @locations, :id, :name_location) %>
+  </div> -->
+    <%= f.hidden_field :location_id, value: params[:location_id] if @penjualan.new_record? %>
+  <hr/>
   <div class='nested_attributes'>
     <%= f.fields_for (:penjualan_details) do |f_details| %>
       <%= render "penjualan_detail_fields", f: f_details %>
     <% end %>
-      <div class="buttons pull-left">
+    <div class="buttons pull-left">
       <%= link_to_add_association '<i></i>Add Penjualan'.html_safe, f, :penjualan_details,:class => "btn btn-icon btn-primary glyphicons circle_plus" %>
+    </div>
+    <br/>
+    <hr/>
+    <%= f.fields_for (:penjualan_bahans) do |f_bahans| %>
+      <%= render "penjualan_bahan_fields", f: f_bahans %>
+    <% end %>
+    <div class="buttons pull-left">
+      <%= link_to_add_association '<i></i>Add Bahan'.html_safe, f, :penjualan_bahans,:class => "btn btn-icon btn-primary glyphicons circle_plus" %>
     </div>
   </div>
   <br/>
   <br/>
-  <br/>
+  <hr/>
   <div class="actions">
     <%= f.submit %>
   </div>

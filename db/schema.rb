@@ -11,12 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130908070904) do
+ActiveRecord::Schema.define(:version => 20130917234705) do
 
   create_table "bahans", :force => true do |t|
     t.string   "nama"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.integer  "location_id"
+    t.integer  "stock"
   end
 
   create_table "karyawans", :force => true do |t|
@@ -41,6 +43,7 @@ ActiveRecord::Schema.define(:version => 20130908070904) do
     t.datetime "created_at",                 :null => false
     t.datetime "updated_at",                 :null => false
     t.integer  "jumlah",      :default => 1
+    t.decimal  "total"
   end
 
   create_table "pengeluaran_bulanans", :force => true do |t|
@@ -55,6 +58,14 @@ ActiveRecord::Schema.define(:version => 20130908070904) do
     t.integer  "jumlah"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "penjualan_bahans", :force => true do |t|
+    t.integer  "penjualan_id"
+    t.integer  "bahan_id"
+    t.integer  "jumlah_bahan"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "penjualan_details", :force => true do |t|

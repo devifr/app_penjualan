@@ -1,0 +1,9 @@
+<div class="control-group">
+  <%= f.label :select_bahan %>
+  <div class="controls">
+    <%= f.collection_select(:bahan_id, @bahans, :id, :bahan_location, {}) %>
+    <%= f.number_field :jumlah_bahan, placeholder: "Jumlah" %>
+  </div>
+</div>
+<%= link_to_remove_association "Remove Bahan", f %>
+<br>

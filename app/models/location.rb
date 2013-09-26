@@ -3,4 +3,5 @@ class Location < ActiveRecord::Base
 
   has_many :pembelians
   has_many :penjualan
+
 end

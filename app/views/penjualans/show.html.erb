@@ -7,14 +7,44 @@
 
 <p>
   <b>Location:</b>
-  <%= @penjualan.location_id %>
+  <%= @penjualan.location.name_location %>
 </p>
 
 <p>
   <b>Jumlah penjualan:</b>
   <%= @penjualan.jumlah_penjualan %>
 </p>
+<hr>
+<p><b>Product</b></p>
+<% @penjualan_details.each do |detail| %>
+<p>
+  Product:
+  <%= detail.product.nama_product %>
+</p>
+<p>
+  Jumlah Product Yang Terjual:
+  <%= detail.jumlah_barang %>
+</p>
+<p>
+  Jumlah Yang Terjual:
+  <%= detail.jumlah_penjualan %>
+</p>
+<% end %>
+<hr>
 
+<p><b>Bahan</b></p>
+<% @penjualan_bahans.each do |pbahan| %>
+<p>
+  Bahan:
+  <%= pbahan.bahan.nama %>
+</p>
+<p>
+  Jumlah Bahan Yang terpakai:
+  <%= pbahan.jumlah_bahan %>
+</p>
+<% end %>
+
+<hr>
 
 <%= link_to 'Edit', edit_penjualan_path(@penjualan) %> |
 <%= link_to 'Back', penjualans_path %>

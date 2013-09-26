@@ -2,7 +2,12 @@
 
 <p>
   <b>Bahan:</b>
-  <%= @pembelian.bahan_id %>
+  <%= @pembelian.bahan.nama %>
+</p>
+
+<p>
+  <b>Jumlah Beli:</b>
+  <%= @pembelian.jumlah %>
 </p>
 
 <p>
@@ -11,13 +16,18 @@
 </p>
 
 <p>
-  <b>Location:</b>
-  <%= @pembelian.location_id %>
+  <b>Total:</b>
+  <%= @pembelian.total %>
 </p>
 
 <p>
   <b>Tanggal:</b>
   <%= @pembelian.tanggal %>
+</p>
+
+<p>
+  <b>Sisa Stock Sekarang:</b>
+  <%= @pembelian.sisa_stock %>
 </p>
 
 

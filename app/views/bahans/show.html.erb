@@ -4,6 +4,14 @@
   <b>Nama:</b>
   <%= @bahan.nama %>
 </p>
+<p>
+  <b>Location:</b>
+  <%= @bahan.location.try(:name_location) %>
+</p>
+<p>
+  <b>Stock:</b>
+  <%= @bahan.stock %>
+</p>
 
 <%= link_to 'Edit', edit_bahan_path(@bahan) %> |
 <%= link_to 'Back', bahans_path %>

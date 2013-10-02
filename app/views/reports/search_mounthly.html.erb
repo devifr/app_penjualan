@@ -1,0 +1,15 @@
+<h1>Search Report</h1>
+<%= form_for(:search, url: mounthly_path) do |f| %>
+  <div class="field">
+    <lable> Bulan </label>
+    <%= text_field :mounth %>
+    <%#= collection_select(:search, :mounth, @mounth, :id, :name_location) %>
+  </div>
+  <div class="field">
+    <lable> Tahun </label>
+    <%= text_field_tag :search, :year %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

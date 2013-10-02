@@ -33,6 +33,10 @@ AppPenjualan::Application.routes.draw do
 
   get "home/index"
   get "penjualan/select_location", to: 'penjualans#select_location', as: 'select_location'
+  get "reports/search_daily", to: 'reports#search_daily', as: 'search_daily'
+  get "reports/search_mounthly", to: 'reports#search_mounthly', as: 'search_mounthly'
+  post "reports/daily", to: 'reports#daily', as: 'daily'
+  post "reports/mounthly", to: 'reports#mounthly', as: 'mounthly'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

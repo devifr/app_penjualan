@@ -1,0 +1,60 @@
+<div class="container">
+  <div style="align:right"><h2><%= @penjualan.location.name_location %></h2></div>
+  <div>Hari/Tanggal : <%= @penjualan.tanggal.to_s(:short_date) %></div>
+  <table border='1'>
+    <thead>
+      <tr>
+        <td colspan="10">
+          Laku
+        </td>
+      </tr>
+      <tr>
+        <td colspan="8">
+          Cup Kecil
+        </td>
+        <td>
+          Cup Besar
+        </td>
+      </tr>
+    </thead>
+  </table>
+</div>
+
+<p>
+  <b>Jumlah penjualan:</b>
+  <%= @penjualan.jumlah_penjualan %>
+</p>
+<hr>
+<p><b>Product</b></p>
+<% @penjualan_details.each do |detail| %>
+<p>
+  Product:
+  <%= detail.product.nama_product %>
+</p>
+<p>
+  Jumlah Product Yang Terjual:
+  <%= detail.jumlah_barang %>
+</p>
+<p>
+  Jumlah Yang Terjual:
+  <%= detail.jumlah_penjualan %>
+</p>
+<% end %>
+<hr>
+
+<p><b>Bahan</b></p>
+<% @penjualan_bahans.each do |pbahan| %>
+<p>
+  Bahan:
+  <%= pbahan.bahan.nama %>
+</p>
+<p>
+  Jumlah Bahan Yang terpakai:
+  <%= pbahan.jumlah_bahan %>
+</p>
+<% end %>
+
+<hr>
+
+<%= link_to 'Edit', edit_penjualan_path(@penjualan) %> |
+<%= link_to 'Back', penjualans_path %>

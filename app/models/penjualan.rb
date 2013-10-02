@@ -20,4 +20,15 @@ class Penjualan < ActiveRecord::Base
     self.jumlah_penjualan = jumlah
   end
 
+  class << self
+    def daily(date=Date.today)
+      Penjualan.where("tanggal = ?",date)
+    end
+
+    def mounthly(mounth,year)
+      awal = "#{year}-#{mounth}-01"
+      akhir = "#{year}-#{mounth}-31"
+       Penjualan.where("tanggal >= ? and tanggal <= ?",awal,akhir)     
+    end
+
 end

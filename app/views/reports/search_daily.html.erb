@@ -1,0 +1,10 @@
+<h1>Search Report Daily</h1>
+<%= form_for(:search, url: daily_path) do |f| %>
+  <div class="field">
+    <label>Tanggal</label>
+    <%= text_field_tag :date %>
+  </div>
+  <div class="actions">
+    <%= f.submit("Search") %>
+  </div>
+<% end %>
